@@ -5,22 +5,106 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+html,body {
+  /* background-image: url("/space.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top; */
+  color: var(--foreground);
+ 
+  overflow-x: hidden;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.article p,figure {
+  margin-bottom: 0.8rem;
+}
+
+@layer base {
+  html {
+   
+    background: radial-gradient(ellipse at bottom, #2b3948 0%, #171b2c 100%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .star-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: animStar 50s linear infinite;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  .star-layer.medium {
+    width: 2px;
+    height: 2px;
+    animation-duration: 100s;
+  }
+
+  .star-layer.large {
+    width: 3px;
+    height: 3px;
+    animation-duration: 150s;
+  }
+
+  .star-layer::after {
+    content: '';
+    position: absolute;
+    top: 2000px;
+    width: inherit;
+    height: inherit;
+    background: transparent;
+    box-shadow: inherit;
+  }
+
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+}
+
+/* CSS */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 16px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 14px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 8px 18px;
+  }
 }

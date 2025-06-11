@@ -1,0 +1,128 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { Post } from '@/lib/types'
+import { SearchBar } from '@/components/search-bar'
+
+
+
+type LatestPostsProps = {
+  posts: Post[]
+  title?: string
+  searchTerm?: string
+  pageInfo?: {
+    startCursor: string | null
+    endCursor: string | null
+    hasNextPage: boolean
+    hasPreviousPage: boolean
+  }
+  category?: string
+  currentPage?: 'blog' | 'category' // ← Новый пропс также в деструктуре где экспорт
+}
+
+const options: Intl.DateTimeFormatOptions = {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+}
+
+// Функция для очистки HTML
+function cleanExcerpt(html: string): string {
+  return html.replace(/<[^>]+>/g, '').trim()
+}
+
+export function LatestPosts({ title, posts, searchTerm, pageInfo, category, currentPage }: LatestPostsProps) {
+  const [mounted, setMounted] = useState(false)
+
+  // Чтобы избежать гидратации — монтируем дату только после загрузки клиента
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (posts?.length === 0) {
+    return <div>Нет записей</div>
+  }
+
+  return (
+    <div className="rounded-t-sm bg-[#fdf6ec]  pb-0 pt-4 md:pt-8 px-4 md:px-8">
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="text-xl font-semibold">{title || 'Новые записи'}</h2>
+        <SearchBar />
+      </div>
+
+      <div className="flex flex-col space-y-4  mb-4">
+        {posts.map((post) => (
+          <div key={post.id} className="shadow-md p-4 rounded-md">
+            <Link href={`/blog/${post.slug}`} className="block rounded">
+              <h3
+                className="font-bold text-lg mb-1"
+                dangerouslySetInnerHTML={{ __html: post.title }}
+              />
+            </Link>
+
+            {/* Безопасный вывод excerpt */}
+            {post.excerpt && (
+              <div className="text-gray-600 text-sm line-clamp-2 mb-1">
+                {cleanExcerpt(post.excerpt)}
+              </div>
+            )}
+
+            {/* Вывод даты после монтирования */}
+            {mounted && (
+              <div className="text-sm text-gray-500">
+                {new Date(post.date).toLocaleDateString('ru-RU', options)}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+
+
+      <div className="flex justify-between">
+        <div>
+          {pageInfo?.hasPreviousPage && (
+            <Link
+              href={{
+                pathname:
+                  currentPage === 'category'
+                    ? `/category/${category}`
+                    : '/blog',
+                query: {
+                  before: pageInfo.startCursor,
+                  ...(searchTerm && { searchTerm }),
+                  ...(category && { category }),
+                },
+              }}
+              className="text-blue-800 hover:underline block p-1"
+            >
+              Назад
+            </Link>
+          )}
+        </div>
+
+        <div>
+          {pageInfo?.hasNextPage && (
+            <Link
+              href={{
+                pathname:
+                  currentPage === 'category'
+                    ? `/category/${category}`
+                    : '/blog',
+                query: {
+                  after: pageInfo.endCursor,
+                  ...(searchTerm && { searchTerm }),
+                  ...(category && { category }),
+                },
+              }}
+              className="text-blue-800 hover:underline block p-1"
+            >
+              Вперед
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
