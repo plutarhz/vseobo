@@ -29,6 +29,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.prettier.log
+.eslintcache
 
 # env files (can opt-in for committing if needed)
 .env*
@@ -39,3 +41,44 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# dotenv environment variables file
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js build ignore
+.next/**/*
+
+# Logs
+logs
+*.log
+
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TypeScript
+# compiled js version of ts files ignored
+# *.js - не игнорим, так как могут быть в проекте
+
+# Optional npm cache
+.npm
+
+# Optional yarn cache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp
+
+# Vercel specific
+vercel.log
