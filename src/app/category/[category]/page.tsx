@@ -1,5 +1,6 @@
 import { LatestPosts } from '@/components/latest-posts'
 import { getCategories, getPostsByCategorySlug } from '@/lib/queries'
+import { notFound } from 'next/navigation'
 
 type Props = {
   params: Promise<{ category: string }>
@@ -24,6 +25,10 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
   // Находим категорию по slug
   const currentCategory = categories.find(cat => cat.slug === category)
+
+  if (!currentCategory) {
+  notFound() // если есть поддержка next/navigation
+}
 
   // Если категория не найдена — можно показать ошибку или просто заголовок с slug
   const categoryName = currentCategory?.name || category
