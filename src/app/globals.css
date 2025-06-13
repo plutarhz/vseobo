@@ -5,17 +5,9 @@
   --foreground: #171717;
 }
 
-
 html,body {
-  /* background-image: url("/space.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top; */
   color: var(--foreground);
- 
   overflow-x: hidden;
-
 }
 
 .article p,figure {
