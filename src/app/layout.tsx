@@ -39,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="relative w-full overflow-x-hidden overflow-y-scroll">
-      <body className={`${opensans.className} antialiased`}>
+    <html lang="en" className="relative w-full">
+      <body className={`${opensans.className} antialiased overflow-x-hidden overflow-y-scroll`}>
 
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
