@@ -1,15 +1,14 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { Literata } from "next/font/google";
 import Link from 'next/link';
 import Image from 'next/image';
+import { literata } from '@/app/fonts';
 
-const literata = Literata({ subsets: ['cyrillic'] })
+// const literata = Literata({ subsets: ['cyrillic'] })
 
 export function Header() {
   const pathname = usePathname()
-
 
   return (
     <header className="flex justify-between items-center rounded-sm bg-[#fdf6ec] py-2 mb:py-4 px-4 md:px-8 mb-4">
