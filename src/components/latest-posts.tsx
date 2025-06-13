@@ -41,7 +41,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
   }, [])
 
   if (posts?.length === 0) {
-    return <div>Нет записей</div>
+    return <div className="article">Нет записей</div>
   }
 
   return (
