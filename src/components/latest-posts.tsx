@@ -41,7 +41,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
   }, [])
 
   if (posts?.length === 0) {
-    return <div className="bg-[#fdf6ec] px-4 md:px-8">Нет записей</div>
+    return <div className="bg-[#fdf6ec] p-4 md:p-8">Нет записей</div>
   }
 
   return (
