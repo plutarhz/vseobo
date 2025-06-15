@@ -54,7 +54,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
       <div className="flex flex-col space-y-4  mb-4">
         {posts.map((post) => (
           <div key={post.id} className="shadow-md p-4 rounded-md">
-            <Link href={`/blog/${post.slug}`} className="block rounded">
+            <Link href={`/blog/${post.slug}`} className="block rounded hover:underline">
               <h3
                 className="font-bold text-lg mb-1"
                 dangerouslySetInnerHTML={{ __html: post.title }}
