@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import StarBackground from "@/components/stars-bg";
@@ -45,6 +46,7 @@ export default function RootLayout({
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
           {children}
+          <SpeedInsights />
           <Footer />
         </div>
         <StarBackground />
