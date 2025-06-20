@@ -126,7 +126,7 @@ export default async function Page({ params }: Props) {
 
       {/* Безопасное использование dangerouslySetInnerHTML */}
       <div
-        className="article md:text-lg text-base font-medium md:leading-relaxed text-[#3a3127] antialiased"
+        className="article md:text-lg text-base text-justify font-medium md:leading-relaxed text-[#3a3127] antialiased"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>
