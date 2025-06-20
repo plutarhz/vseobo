@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { literata } from '@/app/fonts';
 
-// const literata = Literata({ subsets: ['cyrillic'] })
 
 export function Header() {
   const pathname = usePathname()

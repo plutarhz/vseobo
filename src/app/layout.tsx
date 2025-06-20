@@ -1,10 +1,19 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { opensans } from '@/app/fonts';
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import StarBackground from "@/components/stars-bg";
-import { opensans } from '@/app/fonts';
+// import { SpeedInsights } from '@vercel/speed-insights/next';
+// import StarBackground from "@/components/stars-bg";
+
+import dynamic from 'next/dynamic';
+
+const DynamicStarBackground = dynamic(() => import('@/components/stars-bg'), {
+  ssr: false,
+});
+const DynamicSpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then(mod => mod.SpeedInsights), {
+  ssr: false,
+});
 
 
 export const metadata: Metadata = {
@@ -46,10 +55,10 @@ export default function RootLayout({
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
           {children}
-          <SpeedInsights />
+          <DynamicSpeedInsights />
           <Footer />
         </div>
-        <StarBackground />
+        <DynamicStarBackground />
       </body>
     </html>
   );
