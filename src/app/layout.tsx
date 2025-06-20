@@ -46,9 +46,7 @@ export default function RootLayout({
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
           {children}
-          <div className="st">1</div>
           <SpeedInsights />
-          <div className="sot">2</div>
           <Footer />
         </div>
         <StarBackground />
