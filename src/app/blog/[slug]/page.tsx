@@ -1,6 +1,5 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { getPostsBySlug } from '@/lib/queries'
-import { fixMixedContentImages } from '@/lib/utils';
 import Link from 'next/link'
 
 type Props = {
@@ -101,9 +100,6 @@ export default async function Page({ params }: Props) {
   // --- Здесь мы добавляем безопасную проверку на content ---
   const content = typeof post.content === 'string' ? post.content : ''
 
-  // Обрабатываем HTML перед вставкой
-  const safeHTML = fixMixedContentImages(content);
-
   return (
     <div className="px-4 flex-1 rounded-t-sm bg-[#fdf6ec] p-4 md:p-8">
       <h1
@@ -131,7 +127,7 @@ export default async function Page({ params }: Props) {
       {/* Безопасное использование dangerouslySetInnerHTML */}
       <div
         className="article md:text-lg text-base text-justify font-medium md:leading-relaxed text-[#3a3127] antialiased"
-        dangerouslySetInnerHTML={{ __html: safeHTML }}
+        dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>
   )
