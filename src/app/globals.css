@@ -9,6 +9,7 @@ html,body {
   color: var(--foreground);
   overflow-x: hidden;
   box-sizing: border-box;
+  font-display: swap;
 }
 
 .article p,figure {
