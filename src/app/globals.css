@@ -16,13 +16,10 @@ html,body {
   margin-bottom: 0.8rem;
 }
 figure {
-  aspect-ratio: 4 / 3;
-  position: relative;
   margin-bottom: 0.8rem;
 }
 
 figure img{
-  position: absolute;
   max-width: 400px;
   width: 100%;
   height: 100%;
