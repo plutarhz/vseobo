@@ -10,7 +10,7 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="flex justify-between items-center rounded-sm bg-[#fdf6ec] py-2 mb:py-4 px-4 md:px-8 mb-4">
+    <header className="flex justify-between items-center rounded-sm py-2 mb:py-4 px-4 md:px-8 mb-4">
       <div className="font-bold text-xl flex flex-col items-center sm:flex-row space-x-4 relative">
         <Image
           src="/book-svgrepo-com.svg"
@@ -22,7 +22,7 @@ export function Header() {
           loading="eager" alt="Книга знаний - Всё обо всём"
         />
         <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
-        <span className={`${literata.className} text-2xl`}>Всё обо всём</span>
+        <span className={`${literata.className} text-3xl text-white`}>Всё обо всём</span>
       </div>
 
       <nav>
@@ -37,12 +37,6 @@ export function Header() {
             <Link href={'/blog'}>Энциклопедия</Link>
           </li>
           )}
-          {/* <li>
-            <Link href={'/about'}>About</Link>
-          </li> */}
-          {/* <li>
-            <Link href={'/contact'}>Contact</Link>
-          </li> */}
         </ul>
       </nav>
 
