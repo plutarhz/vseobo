@@ -1,13 +1,13 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
+//import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 import Image from 'next/image';
 import { literata } from '@/app/fonts';
 
 
 export function Header() {
-  const pathname = usePathname()
+  // const pathname = usePathname()
 
   return (
     <header className="rounded-sm py-2 mb:py-4 px-4 md:px-8 mb-4">
