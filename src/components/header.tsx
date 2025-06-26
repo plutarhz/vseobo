@@ -11,20 +11,29 @@ export function Header() {
 
   return (
     <header className="rounded-sm py-2 mb:py-4 px-4 md:px-8 mb-4">
-        {/* <Image
-          src="/book-svgrepo-com.svg"
-          width={70}
-          height={70}
+        <Image
+          src="/home-2-svgrepo-com-white.svg"
+          width={50}
+          height={50}
           quality={90}
           placeholder="blur"
-          blurDataURL="/book-svgrepo-com.svg"
+          blurDataURL="/home-2-svgrepo-com-white.svg"
+          loading="eager" alt="На главную"
+        />
+        <Image
+          src="/book-svgrepo-com-white.svg"
+          width={50}
+          height={50}
+          quality={90}
+          placeholder="blur"
+          blurDataURL="/book-svgrepo-com-white.svg"
           loading="eager" alt="Книга знаний - Всё обо всём"
-        /> */}
+        />
       <nav>
         <ul className='flex justify-around items-center flex-col sm:flex-row gap-4'>
           {pathname !== '/' && (
-            <li>
-              <Link href="/">Главная</Link>
+            <li className="relative">
+              <Link href="/" className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
             </li>
           )}
           <li className="relative">
@@ -32,8 +41,8 @@ export function Header() {
             <span className={`${literata.className} text-3xl text-white font-bold`}>Всё обо всём</span>
           </li>
           {pathname !== '/blog' && (
-            <li>
-              <Link href={'/blog'}>Энциклопедия</Link>
+            <li className="relative">
+              <Link href={'/blog'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти в энциклопедию"></Link>
             </li>
           )}
         </ul>
