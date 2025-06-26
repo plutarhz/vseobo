@@ -14,7 +14,7 @@ export function Header() {
 
 
       <nav>
-        <ul className='flex justify-around items-center flex-col sm:flex-row gap-4'>
+        <ul className='flex justify-around items-center gap-4'>
           {pathname !== '/' && (
             <li className="relative">
               <Link href="/" className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
