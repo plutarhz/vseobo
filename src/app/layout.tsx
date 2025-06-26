@@ -5,8 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import LazyStarBackground from '@/components/lazy-stars'; 
 import LazySpeedInsights from '@/components/lazy-speed-insights';
-// import { SpeedInsights } from '@vercel/speed-insights/next';
-// import StarBackground from "@/components/stars-bg";
+import { Analytics } from '@vercel/analytics/next';
 
 
 
@@ -50,6 +49,7 @@ export default function RootLayout({
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
           {children}
+          <Analytics />
           <LazySpeedInsights />
           <Footer />
         </div>
