@@ -7,6 +7,9 @@ import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
 
+import { ProgressBarProvider } from './providers';
+
+
 
 
 
@@ -48,7 +51,7 @@ export default function RootLayout({
 
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
-          {children}
+          <ProgressBarProvider>{children}</ProgressBarProvider>
           <Analytics />
           <LazySpeedInsights />
           <Footer />
