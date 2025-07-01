@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { getPostsBySlug } from '@/lib/queries'
 import Link from 'next/link'
 
-import RelatedPosts from '@/components/RelatedPosts'
+import RelatedPosts from '@/components/related-posts'
 import { getAllPosts } from '@/lib/queries' 
 
 type Props = {
