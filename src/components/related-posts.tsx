@@ -30,7 +30,7 @@ export default function RelatedPosts({ posts, currentPostId }: Props) {
   return (
     <div className="mt-12">
       <h3 className="text-xl font-bold mb-4">Читать ещё</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="flex flex-col space-y-4">
         {relatedPosts.map((post) => (
           <article key={post.id} className="shadow-md p-4 rounded-md p-4 hover:shadow-md transition">
             <Link href={`/blog/${post.slug}`} className="block hover:underline">
