@@ -20,8 +20,8 @@ export function Header() {
             <Link href="/" className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
             <Image
               src="/home-2-svgrepo-com-white.svg"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               quality={90}
               placeholder="blur"
               blurDataURL="/home-2-svgrepo-com-white.svg"
@@ -31,15 +31,15 @@ export function Header() {
 
           <li className="relative">
             <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
-            <span className={`${literata.className} text-2xl sm:text-4xl text-white font-bold underline-offset-8`}>Всё обо всём</span>
+            <span className={`${literata.className} text-4xl sm:text-2xl text-white font-bold underline-offset-8`}>Всё обо всём</span>
           </li>
 
           <li className="relative">
             <Link href={'/blog'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти в энциклопедию"></Link>
             <Image
               src="/book-svgrepo-com-white.svg"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               quality={90}
               placeholder="blur"
               blurDataURL="/book-svgrepo-com-white.svg"
