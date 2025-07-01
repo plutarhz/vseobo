@@ -16,6 +16,11 @@ export function Header() {
       <nav>
         <ul className='flex justify-around items-end gap-4'>
 
+          <li className="relative text-center">
+            <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
+            <span className={`${literata.className} text-3xl md:text-4xl text-white font-bold underline-offset-8`}>Всё обо всём</span>
+          </li>
+
           <li className="relative">
             <Link href="/" className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
             <Image
@@ -27,11 +32,6 @@ export function Header() {
               blurDataURL="/home-2-svgrepo-com-white.svg"
               loading="eager" alt="На главную"
             />
-          </li>
-
-          <li className="relative text-center">
-            <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
-            <span className={`${literata.className} text-3xl md:text-4xl text-white font-bold underline-offset-8`}>Всё обо всём</span>
           </li>
 
           <li className="relative">
