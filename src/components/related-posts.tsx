@@ -32,7 +32,7 @@ export default function RelatedPosts({ posts, currentPostId }: Props) {
       <h3 className="text-xl font-bold mb-4">Читать ещё</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {relatedPosts.map((post) => (
-          <article key={post.id} className="border p-4 rounded shadow hover:shadow-md transition">
+          <article key={post.id} className="shadow-md p-4 rounded-md p-4 hover:shadow-md transition">
             <Link href={`/blog/${post.slug}`} className="block hover:underline">
               <h4 className="text-lg font-semibold" dangerouslySetInnerHTML={{ __html: post.title }} />
             </Link>
