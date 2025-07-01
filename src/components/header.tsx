@@ -16,9 +16,9 @@ export function Header() {
       <nav>
         <ul className='flex justify-around items-end gap-4'>
 
-          <li className="relative text-center">
+          <li className="relative">
             <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
-            <span className={`${literata.className} text-3xl md:text-4xl text-white font-bold underline-offset-8`}>Всё обо всём</span>
+            <span className={`${literata.className} text-4xl md:text-5xl text-center text-white font-bold underline-offset-8`}>Всё обо всём</span>
           </li>
 
           <li className="relative">
