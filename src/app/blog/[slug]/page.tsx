@@ -2,6 +2,9 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import { getPostsBySlug } from '@/lib/queries'
 import Link from 'next/link'
 
+import RelatedPosts from '@/components/RelatedPosts'
+import { getAllPosts } from '@/lib/queries' 
+
 type Props = {
   params: Promise<{ slug: string }>
 }
@@ -97,6 +100,9 @@ export default async function Page({ params }: Props) {
     (cat): cat is { name: string; slug: string } => Boolean(cat?.slug && cat?.name)
   ) || []
 
+  // Получаем все посты для RelatedPosts
+  const allPosts = await getAllPosts()
+
   // --- Здесь мы добавляем безопасную проверку на content ---
   const content = typeof post.content === 'string' ? post.content : ''
 
@@ -129,6 +135,10 @@ export default async function Page({ params }: Props) {
         className="article md:text-lg text-base text-justify font-medium md:leading-relaxed text-[#3a3127] antialiased"
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      {/* Блок "Читать ещё" */}
+      <RelatedPosts posts={allPosts.posts} currentPostId={post.id} />
     </div>
+
+    
   )
 }
