@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { opensans } from '@/app/fonts';
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import LazyStarBackground from '@/components/lazy-stars'; 
+import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
 
@@ -47,6 +47,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative w-full">
+      <head>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="vseovsem" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body className={`${opensans.className} antialiased overflow-x-hidden overflow-y-scroll`}>
 
         <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
