@@ -18,7 +18,7 @@ export function Header() {
 
           <li className="relative">
             <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
-            <span className={`${literata.className} text-4xl md:text-5xl text-center text-white font-bold underline-offset-8`}>Всё обо всём</span>
+            <span className={`${literata.className} text-4xl md:text-5xl text-center text-white font-bold`}>Всё обо всём</span>
           </li>
 
           <li className="relative">
