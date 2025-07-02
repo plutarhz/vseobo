@@ -17,7 +17,9 @@ export default async function Home() {
         <h2 className="text-xl font-semibold mb-4">Категории</h2>
         <Categories categories={categories} />
       </div>
+      oooooo
       <LatestPosts posts={posts} />
+      llllll
       <div className="text-center bg-[#fdf6ec] py-2">
         <Link href={`/blog`} className='button-74'>
           Читать далее...
