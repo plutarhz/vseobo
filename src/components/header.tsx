@@ -14,14 +14,14 @@ export function Header() {
 
       {/* {pathname !== '/' && ( здесь можно вставить то что показывать или нет )} */}
       <nav>
-        <ul className='flex justify-around items-end gap-4'>
+        <ul className='flex justify-between items-center gap-4'>
 
           <li className="relative">
             <Link href={'/'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
             <span className={`${literata.className} text-4xl md:text-5xl text-center text-white font-bold`}>Всё обо всём</span>
           </li>
 
-          <li className="relative">
+          {/* <li className="relative">
             <Link href="/" className="absolute t-0 l-0 w-full h-full" aria-label="Перейти на главную страницу"></Link>
             <Image
               src="/home-2-svgrepo-com-white.svg"
@@ -32,14 +32,14 @@ export function Header() {
               blurDataURL="/home-2-svgrepo-com-white.svg"
               loading="eager" alt="На главную"
             />
-          </li>
+          </li> */}
 
           <li className="relative">
             <Link href={'/blog'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти в энциклопедию"></Link>
             <Image
               src="/book-svgrepo-com-white.svg"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
               quality={90}
               placeholder="blur"
               blurDataURL="/book-svgrepo-com-white.svg"
