@@ -3,7 +3,7 @@ import { getAllPostSlugsAndDates, getAllCategoriesSlugs } from '@/lib/queries'
 
 export async function GET() {
   // Получаем SITE_URL из переменной окружения или используем fallback
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vsbvsm.ru'
 
   // Получаем данные
   const [postsData, categorySlugs] = await Promise.all([
