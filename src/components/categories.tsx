@@ -13,7 +13,7 @@ export function Categories({ categories }: { categories: Category[] }) {
           <span className="px-2 py-1">{category.name}</span>
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#171717] group-hover:w-full group-hover:transition-all"></span>
           {typeof category.count === 'number' && (
-            <span className="px-2 py-1 border-l-1 font-medium">
+            <span className="px-2 py-1 border-l-1 font-bold bg-[#171717] text-[#fdf6ec]">
               {category.count}
             </span>
           )}
