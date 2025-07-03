@@ -38,8 +38,8 @@ export function Header() {
             <Link href={'/blog'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти в энциклопедию"></Link>
             <Image
               src="/book-svgrepo-com-white.svg"
-              width={50}
-              height={50}
+              width={45}
+              height={45}
               quality={90}
               placeholder="blur"
               blurDataURL="/book-svgrepo-com-white.svg"
