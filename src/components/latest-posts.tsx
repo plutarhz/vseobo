@@ -101,8 +101,8 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
             >
               <Image
                 src="/free-icon-right-arrow-64604.png"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 quality={90}
                 placeholder="blur"
                 blurDataURL="/free-icon-right-arrow-64604.png"
@@ -131,8 +131,8 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
             >
                <Image
                 src="/free-icon-right-arrow-64604-fwd.png"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 quality={90}
                 placeholder="blur"
                 blurDataURL="/free-icon-right-arrow-64604-fwd.png"
