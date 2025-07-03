@@ -87,7 +87,7 @@ export async function GET() {
       <!-- Главная -->
       <url>
         <loc>${siteUrl}</loc>
-        <lastmod>${now}</lastmod>
+        // <lastmod>${now}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
       </url>
