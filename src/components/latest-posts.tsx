@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Post } from '@/lib/types'
 import { SearchBar } from '@/components/search-bar'
+import Image from 'next/image';
 
 
 
@@ -83,6 +84,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
       <div className="flex justify-between">
         <div>
           {pageInfo?.hasPreviousPage && (
+
             <Link
               href={{
                 pathname:
@@ -97,8 +99,17 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
               }}
               className="text-blue-800 hover:underline block p-1"
             >
-              Назад
+              <Image
+                src="/free-icon-right-arrow-64604-fwd.png"
+                width={32}
+                height={32}
+                quality={90}
+                placeholder="blur"
+                blurDataURL="/free-icon-right-arrow-64604-fwd.png"
+                loading="eager" alt="Книга знаний - Всё обо всём"
+              />
             </Link>
+
           )}
         </div>
 
@@ -120,6 +131,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
             >
               Вперед
             </Link>
+
           )}
         </div>
       </div>
