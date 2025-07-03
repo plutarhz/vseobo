@@ -71,7 +71,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
 
             {/* Вывод даты после монтирования */}
             {mounted && (
-              <div className="text-sm text-gray-500">
+              <div className="text-sm font-bold">
                 {new Date(post.date).toLocaleDateString('ru-RU', options)}
               </div>
             )}
