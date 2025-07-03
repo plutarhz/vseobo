@@ -100,12 +100,12 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
               className="text-blue-800 hover:underline block p-1"
             >
               <Image
-                src="/free-icon-right-arrow-64604-fwd.png"
+                src="/free-icon-right-arrow-64604.png"
                 width={32}
                 height={32}
                 quality={90}
                 placeholder="blur"
-                blurDataURL="/free-icon-right-arrow-64604-fwd.png"
+                blurDataURL="/free-icon-right-arrow-64604.png"
                 loading="eager" alt="Книга знаний - Всё обо всём"
               />
             </Link>
@@ -129,7 +129,15 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
               }}
               className="text-blue-800 hover:underline block p-1"
             >
-              Вперед
+               <Image
+                src="/free-icon-right-arrow-64604-fwd.png"
+                width={32}
+                height={32}
+                quality={90}
+                placeholder="blur"
+                blurDataURL="/free-icon-right-arrow-64604-fwd.png"
+                loading="eager" alt="Книга знаний - Всё обо всём"
+              />
             </Link>
 
           )}
