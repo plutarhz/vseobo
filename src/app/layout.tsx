@@ -7,8 +7,9 @@ import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
 import YandexMetrika from '@/components/yandex-metrica'
-import GoogleAnalytics from '@/components/google-analytics'
+// import GoogleAnalytics from '@/components/google-analytics'
 import { ProgressBarProvider } from './providers';
+import Script from 'next/script'
 
 
 
@@ -48,6 +49,7 @@ export default function RootLayout({
 }>) {
 
   const ymID = process.env.YANDEX_METRIKA_ID || '103197597'
+  const GA_MEASUREMENT_ID = 'G-V9GB6PBB04'
 
   return (
     <html lang="en" className="relative w-full">
@@ -70,7 +72,18 @@ export default function RootLayout({
         </div>
         <LazyStarBackground />
         <YandexMetrika ymID={Number(ymID)} />
-        <GoogleAnalytics/>
+        <Script
+          src={` https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V9GB6PBB04');
+          `}
+        </Script>
       </body>
     </html>
   );
