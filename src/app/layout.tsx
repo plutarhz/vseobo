@@ -6,13 +6,8 @@ import { Footer } from "@/components/footer";
 import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
-// import YandexMetrika from '@/components/yandex-metrica'
-// import GoogleAnalytics from '@/components/google-analytics'
 import { ProgressBarProvider } from './providers';
 import Script from 'next/script'
-
-
-
 
 
 export const metadata: Metadata = {
