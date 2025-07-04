@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
-
+import YandexMetrika from '@/components/yandex-metrica'
 import { ProgressBarProvider } from './providers';
 
 
@@ -45,6 +45,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const ymID = process.env.YANDEX_METRIKA_ID || '103197597'
+
   return (
     <html lang="en" className="relative w-full">
       <head>
@@ -65,6 +68,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <LazyStarBackground />
+        <YandexMetrika ymID={Number(ymID)} />
       </body>
     </html>
   );
