@@ -7,6 +7,7 @@ import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
 import YandexMetrika from '@/components/yandex-metrica'
+import GoogleAnalytics from '@/components/google-analytics'
 import { ProgressBarProvider } from './providers';
 
 
@@ -69,6 +70,7 @@ export default function RootLayout({
         </div>
         <LazyStarBackground />
         <YandexMetrika ymID={Number(ymID)} />
+        <GoogleAnalytics/>
       </body>
     </html>
   );
