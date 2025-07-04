@@ -18,7 +18,7 @@ export default async function Home() {
         <Categories categories={categories} />
       </div>
       <LatestPosts posts={posts} />
-      <div className="text-center bg-[#fdf6ec] py-2">
+      <div className="text-center bg-[#fdf6ec] p-6 md:p-8">
         <Link href={`/blog`} className='button-74'>
           Читать далее...
         </Link>
