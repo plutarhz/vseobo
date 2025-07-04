@@ -48,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const ymID = process.env.YANDEX_METRIKA_ID || '103197597'
+  
   const GA_MEASUREMENT_ID = 'G-V9GB6PBB04'
 
   return (
