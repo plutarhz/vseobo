@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-const GA_MEASUREMENT_ID = 'G-WYN8VMWMLP' // ← замени на свой
+const GA_MEASUREMENT_ID = 'G-V9GB6PBB04' // ← замени на свой
 
 export default function GoogleAnalytics() {
   const isProduction = process.env.NODE_ENV === 'production'
