@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 import LazyStarBackground from '@/components/lazy-stars';
 import LazySpeedInsights from '@/components/lazy-speed-insights';
 import { Analytics } from '@vercel/analytics/next';
-import YandexMetrika from '@/components/yandex-metrica'
+// import YandexMetrika from '@/components/yandex-metrica'
 // import GoogleAnalytics from '@/components/google-analytics'
 import { ProgressBarProvider } from './providers';
 import Script from 'next/script'
@@ -71,7 +71,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <LazyStarBackground />
-        <YandexMetrika ymID={Number(ymID)} />
+        
         <Script
           src={` https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -84,6 +84,26 @@ export default function RootLayout({
             gtag('config', 'G-V9GB6PBB04');
           `}
         </Script>
+        <Script id="yandex-metrika" strategy="afterInteractive">
+        {`
+          (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+              (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1; k.src = r; a.parentNode?.insertBefore(k, a)
+          })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym")
+
+          if (typeof ym === 'function') {
+            ym(103197597, "init", {
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true
+            });
+          }
+        `}
+      </Script>
       </body>
     </html>
   );
