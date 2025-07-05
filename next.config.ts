@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   swcMinify: true,
   images: {
-    domains: ["194.87.99.150", "vsbvsm.ru", "vsbvsm.online", "vseobovsemm.duckdns.org"],
+    domains: ["194.87.99.150", "vsbvsm.ru", "vseobovsemm.duckdns.org"],
   },
   async redirects() {
     return [
@@ -17,17 +17,6 @@ const nextConfig: NextConfig = {
         ],
         permanent: true,
         destination: "https://vsbvsm.ru/ :path*", // без www
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.vsbvsm.online",
-          },
-        ],
-        permanent: true,
-        destination: "https://vsbvsm.online/ :path*",
       },
     ];
   },
