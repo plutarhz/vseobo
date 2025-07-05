@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
           },
         ],
         permanent: true,
-        destination: "https://vsbvsm.ru/ :path*", // без www
+        destination: "https://vsbvsm.ru/:path*", // без www
       },
     ];
   },
