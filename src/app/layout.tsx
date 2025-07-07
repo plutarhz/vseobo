@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Всё обо всём - энциклопедия",
     description: "Книга подготовлена при участии Центра гуманитарных наук при факультете журналистики МГУ им. М. В. Ломоносова",
-    url: "https://example.com",  // ← замени на свой домен
+    url: "https://vsbvsm.ru",  // ← замени на свой домен
     siteName: "Всё обо всём",
     images: [
       {
