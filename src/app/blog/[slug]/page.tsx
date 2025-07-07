@@ -86,7 +86,7 @@ export default async function Page({ params }: Props) {
   const post = await getPostsBySlug(slug)
 
   if (!post) {
-    return <div className="bg-[#fdf6ec] p-4 md:p-8">Пост не найден</div>
+    return <div className="bg-[#fdf6ec] p-4 md:p-8 rounded-t-sm">Пост не найден</div>
   }
 
   const formattedDate = new Date(post.date)
