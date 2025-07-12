@@ -38,7 +38,7 @@ export function Header() {
           <li className="relative">
             <Link
               href="/blog"
-              className="absolute t-0 l-0 w-full h-full z-18"
+              className="absolute t-0 l-0 size-45px z-18"
               aria-label="Перейти в энциклопедию"
               onClick={() => {
                 console.log('Цель "blog" вызвана');
