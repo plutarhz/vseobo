@@ -7,14 +7,6 @@ type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-// export async function generateMetadata({ params }: Props) {
-//   const category = (await params).category
-
-//   return {
-//     title: `Категория: ${category}`,
-//     description: `Посты по теме "${category}"`,
-//   }
-// }
 
 export async function generateMetadata({ params }: Props) {
   const { category } = await params;

@@ -51,7 +51,7 @@ export async function generateMetadata(
 
 
   // URL статьи
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vse-o-vsem.ru' 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vsbvsm.ru' 
   const url = `${siteUrl}/category/${slug}`
 
   // Изображение для OG и Twitter
