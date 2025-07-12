@@ -39,7 +39,13 @@ export function Header() {
             <Link href={'/blog'}
               className="absolute t-0 l-0 w-full h-full"
               aria-label="Перейти в энциклопедию"
-              onClick={() => ym(103197597, 'reachGoal', 'blog')}
+              onClick={() => {
+                // Отправляем цель в Яндекс.Метрику
+                ym(103197597, 'reachGoal', 'blog');
+
+                // Выводим сообщение в консоль
+                console.log('Цель "blog" отправлена');
+              }}
             ></Link>
             <Image
               src="/book-svgrepo-com-white.svg"
