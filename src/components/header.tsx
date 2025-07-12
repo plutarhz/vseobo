@@ -36,17 +36,16 @@ export function Header() {
           </li> */}
 
           <li className="relative">
-            <Link href={'/blog'}
+            <Link
+              href="/blog"
               className="absolute t-0 l-0 w-full h-full"
               aria-label="Перейти в энциклопедию"
               onClick={() => {
-                // Отправляем цель в Яндекс.Метрику
+                console.log('Цель "blog" вызвана');
                 ym(103197597, 'reachGoal', 'blog');
-
-                // Выводим сообщение в консоль
-                console.log('Цель "blog" отправлена');
               }}
-            ></Link>
+            >
+            </Link>
             <Image
               src="/book-svgrepo-com-white.svg"
               width={45}
