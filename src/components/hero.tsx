@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <div className="rounded-sm bg-[#fdf6ec] ">
       <div className="p-4 md:p-8">
-        <h1 className="font-bold text-xl md:text-2xl mb-4">Энциклопедия дляz детей и взрослых</h1>
+        <h1 className="font-bold text-xl md:text-2xl mb-4">Энциклопедия для детей и взрослых</h1>
         <p className="text-base md:text-lg">
           Книга подготовлена при участии Центра гуманитарных наук 
         </p>
