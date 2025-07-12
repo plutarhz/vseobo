@@ -42,7 +42,7 @@ export default async function Home() {
       <Hero />
       {/* <SocialIcons /> */}
       <div className="rounded-b-sm bg-[#fdf6ec] p-3 md:px-6 mb-3">
-        <h2 className="text-xl font-semibold mb-4">Категории</h2>
+        <h2 className="text-xl font-semibold mb-3">Категории</h2>
         <Categories categories={categories} />
       </div>
       <LatestPosts posts={posts} />

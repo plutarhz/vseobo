@@ -4,11 +4,11 @@ export function Hero() {
   return (
     <div className="rounded-sm bg-[#fdf6ec] ">
       <div className="p-3 md:p-6">
-        <h1 className="font-bold text-xl md:text-2xl mb-4">Энциклопедия для детей и взрослых</h1>
+        <h1 className="font-bold text-xl md:text-2xl mb-3">Энциклопедия для детей и взрослых</h1>
         <p className="text-base md:text-lg">
           Книга подготовлена при участии Центра гуманитарных наук 
         </p>
-        <p className="text-base md:text-lg mb-4">
+        <p className="text-base md:text-lg mb-3">
           при факультете журналистики МГУ им. М. В. Ломоносова.
         </p>
         <p className="text-base">
