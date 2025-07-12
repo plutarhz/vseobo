@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { literata } from '@/app/fonts';
+declare const ym: (counterId: number, event: string, goal: string) => void;
 
 
 export function Header() {
@@ -35,7 +36,11 @@ export function Header() {
           </li> */}
 
           <li className="relative">
-            <Link href={'/blog'} className="absolute t-0 l-0 w-full h-full" aria-label="Перейти в энциклопедию"></Link>
+            <Link href={'/blog'}
+              className="absolute t-0 l-0 w-full h-full"
+              aria-label="Перейти в энциклопедию"
+              onClick={() => ym(103197597, 'reachGoal', 'blog')}
+            ></Link>
             <Image
               src="/book-svgrepo-com-white.svg"
               width={45}
