@@ -36,7 +36,7 @@ export function Header() {
           </li> */}
 
           <li className="relative">
-            {/* <Link
+            <Link
               href="/blog"
               className="absolute t-0 l-0 w-full h-full z-18"
               aria-label="Перейти в энциклопедию"
@@ -46,26 +46,7 @@ export function Header() {
               }}
             >
               <span style={{ display: 'block', width: '100%', height: '100%' }}></span>
-            </Link> */}
-            <Link href="/blog" className="absolute t-0 l-0 w-full h-full z-18" aria-label="Перейти в энциклопедию">
-              <span
-                style={{ display: 'block', width: '100%', height: '100%' }}
-                onClick={(e) => {
-                  e.preventDefault(); // предотвращаем дефолтное поведение, если нужно
-                  console.log('Цель "blog" вызвана');
-                  ym(103197597, 'reachGoal', 'blog');
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    console.log('Цель "blog" вызвана (клавиатура)');
-                    ym(103197597, 'reachGoal', 'blog');
-                  }
-                }}
-                role="link"
-                tabIndex={0}
-                aria-label="Перейти в энциклопедию"
-              ></span>
-            </Link>
+            </Link> 
             <Image
               src="/book-svgrepo-com-white.svg"
               width={45}
