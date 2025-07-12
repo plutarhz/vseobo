@@ -35,10 +35,10 @@ export function Header() {
             />
           </li> */}
          
-          <li className="relative">
+          <li className="relative w-[45px] h-[45px]">
             <Link
               href="/blog"
-              className="absolute t-0 l-0 w-[45px] h-[45px] z-18"
+              className="absolute t-0 l-0 z-18"
               aria-label="Перейти в энциклопедию"
               onClick={() => {
                 console.log('Цель "blog" вызвана');
