@@ -29,10 +29,10 @@ export default function RelatedPosts({ posts, currentPostId }: Props) {
 
   return (
     <div className="mt-12">
-      <h3 className="text-xl font-bold mb-4">Читать ещё</h3>
-      <div className="flex flex-col space-y-4">
+      <h3 className="text-xl font-bold mb-3">Читать ещё</h3>
+      <div className="flex flex-col space-y-3">
         {relatedPosts.map((post) => (
-          <article key={post.id} className="shadow-md p-4 rounded-md p-4 hover:shadow-md transition">
+          <article key={post.id} className="shadow-md p-3 rounded-md hover:shadow-md transition">
             <Link href={`/blog/${post.slug}`} className="block hover:underline">
               <h4 className="text-lg font-semibold" dangerouslySetInnerHTML={{ __html: post.title }} />
             </Link>
