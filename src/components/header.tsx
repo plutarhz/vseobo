@@ -43,6 +43,7 @@ export function Header() {
               onClick={() => {
                 console.log('Цель "blog" вызвана');
                 ym(103197597, 'reachGoal', 'blog');
+                console.log('Цель "blog" ушла');
               }}
             >
               
