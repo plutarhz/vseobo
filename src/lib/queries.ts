@@ -13,6 +13,7 @@ export async function getCategories(): Promise<Category[]> {
         name
         slug
         count
+        description
       }
     }
   }

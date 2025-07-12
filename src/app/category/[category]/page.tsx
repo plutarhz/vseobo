@@ -7,14 +7,38 @@ type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
+// export async function generateMetadata({ params }: Props) {
+//   const category = (await params).category
+
+//   return {
+//     title: `Категория: ${category}`,
+//     description: `Посты по теме "${category}"`,
+//   }
+// }
+
 export async function generateMetadata({ params }: Props) {
-  const category = (await params).category
+  const { category } = await params;
+
+  // Получаем все категории
+  const categories = await getCategories();
+
+  // Находим категорию по slug
+  const wpCategory = categories.find(cat => cat.slug === category);
+
+  if (!wpCategory) {
+    return {
+      title: `Категория: ${category}`,
+      description: `Посты по теме "${category}"`,
+    };
+  }
 
   return {
-    title: `Категория: ${category}`,
-    description: `Посты по теме "${category}"`,
-  }
+    title: `Категория: ${wpCategory.name}`,
+    description: wpCategory.description || `Посты по теме "${wpCategory.name}"`,
+  };
 }
+
+
 
 export default async function CategoryPage({ params, searchParams }: Props) {
   const { category } = await params

@@ -3,6 +3,7 @@ export type Category = {
   name: string;
   slug: string;
   count?: number;
+  description?: string;
 };
 
 export type Tag = {
