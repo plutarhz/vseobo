@@ -52,9 +52,9 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
         <SearchBar />
       </div>
 
-      <div className="flex flex-col space-y-4  mb-4">
+      <div className="flex flex-col space-y-3  mb-4">
         {posts.map((post) => (
-          <div key={post.id} className="shadow-md p-4 rounded-md">
+          <div key={post.id} className="shadow-md p-3 rounded-md">
             <Link href={`/blog/${post.slug}`} className="block rounded hover:underline">
               <h3
                 className="font-bold text-lg mb-1"
