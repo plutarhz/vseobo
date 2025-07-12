@@ -48,7 +48,7 @@ export function Header() {
             >
 
             </Link> */}
-            <button className="d-block absolute t-0 l-0 w-full h-full z-18" onClick={() => {
+            <button className="block absolute t-0 l-0 size-45px z-18" onClick={() => {
               console.log('Цель "blog" вызвана');
               ym(103197597, 'reachGoal', 'blog');
             }}>
