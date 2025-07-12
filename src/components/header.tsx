@@ -45,6 +45,7 @@ export function Header() {
                 ym(103197597, 'reachGoal', 'blog');
               }}
             >
+              <span style={{ display: 'block', width: '100%', height: '100%' }}></span>
             </Link>
             <Image
               src="/book-svgrepo-com-white.svg"
