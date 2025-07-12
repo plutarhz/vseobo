@@ -34,9 +34,9 @@ export function Header() {
               loading="eager" alt="На главную"
             />
           </li> */}
-         
+
           <li className="relative">
-            <Link
+            {/* <Link
               href="/blog"
               className="absolute t-0 l-0 w-full h-full z-18"
               aria-label="Перейти в энциклопедию"
@@ -47,8 +47,12 @@ export function Header() {
               }}
             >
 
-            </Link>
-            <Image
+            </Link> */}
+            <button className="absolute t-0 l-0 w-full h-full z-18" onClick={() => {
+              console.log('Цель "blog" вызвана');
+              ym(103197597, 'reachGoal', 'blog');
+            }}>
+              <Image
               src="/book-svgrepo-com-white.svg"
               width={45}
               height={45}
@@ -57,6 +61,8 @@ export function Header() {
               blurDataURL="/book-svgrepo-com-white.svg"
               loading="eager" alt="Книга знаний - Всё обо всём"
             />
+            </button>
+            
           </li>
 
         </ul>
