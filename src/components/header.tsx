@@ -11,7 +11,7 @@ export function Header() {
   // const pathname = usePathname()
 
   return (
-    <header className="rounded-sm py-2 mb:py-4 px-4 md:px-8 mb-4">
+    <header className="rounded-sm py-2 px-4 md:px-8 mb-4">
 
       {/* {pathname !== '/' && ( здесь можно вставить то что показывать или нет )} */}
       <nav>
