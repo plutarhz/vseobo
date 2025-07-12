@@ -34,6 +34,14 @@ export function Header() {
               loading="eager" alt="На главную"
             />
           </li> */}
+          <li>
+            <button onClick={() => {
+              console.log('Цель "blog" вызвана');
+              ym(103197597, 'reachGoal', 'book');
+            }}>
+              Отправить цель
+            </button>
+          </li>
 
           <li className="relative">
             <Link
@@ -46,8 +54,8 @@ export function Header() {
                 console.log('Цель "blog" ушла');
               }}
             >
-              
-            </Link> 
+
+            </Link>
             <Image
               src="/book-svgrepo-com-white.svg"
               width={45}
