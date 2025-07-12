@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body className={`${opensans.className} antialiased overflow-x-hidden overflow-y-scroll`}>
 
-        <div className="max-w-[1024px] p-4 mx-auto min-h-screen z-9 flex flex-col">
+        <div className="max-w-[1024px] p-3 mx-auto min-h-screen z-9 flex flex-col">
           <Header />
           <ProgressBarProvider>{children}</ProgressBarProvider>
           <Analytics />
