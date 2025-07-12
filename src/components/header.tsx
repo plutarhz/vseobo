@@ -35,7 +35,7 @@ export function Header() {
             />
           </li> */}
          
-          <li className="relative w-[45px] h-[45px]">
+          <li className="relative w-[45px] h-[45px] z-1">
             <Link
               href="/blog"
               className="absolute t-0 l-0 z-18"
