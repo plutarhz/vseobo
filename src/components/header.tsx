@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { literata } from '@/app/fonts';
-declare const ym: (counterId: number, event: string, goal: string) => void;
+
 
 
 export function Header() {
