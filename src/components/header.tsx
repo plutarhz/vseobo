@@ -40,11 +40,6 @@ export function Header() {
               href="/blog"
               className="absolute t-0 l-0 z-18"
               aria-label="Перейти в энциклопедию"
-              onClick={() => {
-                console.log('Цель "blog" вызвана');
-                ym(103197597, 'reachGoal', 'blog');
-                console.log('Цель "blog" ушла');
-              }}
             >
             <Image
               src="/book-svgrepo-com-white.svg"
