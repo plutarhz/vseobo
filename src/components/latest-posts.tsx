@@ -47,7 +47,7 @@ export function LatestPosts({ title, posts, searchTerm, pageInfo, category, curr
 
   return (
     <div className="rounded-t-sm bg-[#fdf6ec]  pb-0 p-3 md:pt-6 md:px-6">
-      <div className="flex justify-between items-center mb-3">
+      <div className="flex justify-between items-center mb-3 md:mb-6">
         <h2 className="text-xl font-semibold">{title || 'Новые посты'}</h2>
         <SearchBar />
       </div>
