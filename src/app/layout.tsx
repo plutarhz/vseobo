@@ -21,7 +21,7 @@ export default function RootLayout({
   const GA_MEASUREMENT_ID = 'G-V9GB6PBB04'
 
   return (
-    <html lang="en" className="relative w-full">
+    <html lang="ru" className="relative w-full">
       <head>
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
