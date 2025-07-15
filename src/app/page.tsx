@@ -48,7 +48,7 @@ export default async function Home() {
       <LatestPosts posts={posts} />
       <div className="text-center bg-[#fdf6ec] p-6 pb-3">
         <Link href={`/blog`} className='button-74'>
-          Читать далее...
+          Читать далее....
         </Link>
       </div>
     </section>
