@@ -60,7 +60,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       </h2>
       {/* Вывод описания категории */}
       {categoryDescription && (
-        <p className="text-lg text-gray-700 mt-4 px-3 md:px-6 bg-[#fdf6ec]">
+        <p className="text-lg px-3 md:px-6 bg-[#fdf6ec]">
           {categoryDescription}
         </p>
       )}
