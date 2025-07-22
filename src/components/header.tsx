@@ -36,7 +36,7 @@ export function Header() {
               quality={90}
               placeholder="blur"
               blurDataURL="/book-svgrepo-com-white.svg"
-              loading="eager" alt="Книга знаний - Всё обо всём"
+              loading="eager" alt="Книга знаний - Всё обо всёмм"
             />
             </Link>
           </li>
