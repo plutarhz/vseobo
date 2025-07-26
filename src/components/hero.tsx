@@ -16,7 +16,7 @@ export function Hero() {
           Мы верим, что знание — это ключ к миру , и стремимся сделать его доступным каждому. Листайте статьи, углубляйтесь в темы, удивляйтесь фактам и расширяйте горизонты — вместе с нами!  
         </p>
       </div>
-      <Image src="/image_002.webp" width={1024} height={400} quality={90} placeholder="blur" blurDataURL="/hero-img.webp" loading="eager" alt="Freelance web dev..." />
+      <Image src="/image_002.webp" width={1024} height={400} quality={90} placeholder="blur" blurDataURL="/image_002.webp" loading="eager" alt="Freelance web dev..." />
     </div>
   )
 }
