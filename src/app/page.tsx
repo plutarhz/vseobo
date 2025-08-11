@@ -41,7 +41,7 @@ export default async function Home() {
     <section>
       <Hero />
       {/* <SocialIcons /> */}
-      <div className="rounded-b-sm bg-[#fdf6ec] py-3 md:px-6 mb-3">
+      <div className="rounded-b-sm bg-[#fdf6ec] p-3 md:p-6 mb-3">
         <h2 className="text-xl font-semibold mb-3">Категории</h2>
         <Categories categories={categories} />
       </div>
